@@ -3,7 +3,7 @@
 Xursor is a Windows desktop prototype for a secondary on-screen assistant. The current codebase implements the overlay shell: a PyQt6 app that opens a transparent always-on-top overlay window, follows the cursor, and runs from the system tray. The intended next subsystem is a hover-driven UI explainer that captures the hovered region, sends it to a local model server, and reflects request state through the overlay.
 
 ## PREREQUIREMENTS
-## Local Model API (LMStudio)
+Local Model API (LMStudio)
 
 Current model integration targets a local HTTP service at `http://10.0.0.37:1234`.
 
