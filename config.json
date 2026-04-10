@@ -1,0 +1,7 @@
+{
+  "capture_binding": [
+    "F8"
+  ],
+  "lmstudio_endpoint": "http://10.0.0.37:1234",
+  "lmstudio_prompt": "Describe what is visible directly and concisely. Do not say screenshot, image, picture, or photo. Do not start with phrases like this screenshot shows or this image shows."
+}

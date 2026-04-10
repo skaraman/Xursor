@@ -1,0 +1,1 @@
+A dark interface displays model settings with text reading "This model can process image inputs." A highlighted yellow tab shows "s3.5-27b-v3," followed by icons for preview, turbo mode, refresh, and folder access, ending with a bright green status indicator. Below, a blue panel features "GB" on the left and a "Parallel 1" label.
