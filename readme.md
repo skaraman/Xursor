@@ -2,6 +2,19 @@
 
 Xursor is a Windows desktop prototype for a secondary on-screen assistant. The current codebase implements the overlay shell: a PyQt6 app that opens a transparent always-on-top overlay window, follows the cursor, and runs from the system tray. The intended next subsystem is a hover-driven UI explainer that captures the hovered region, sends it to a local model server, and reflects request state through the overlay.
 
+## PREREQUIREMENTS
+## Local Model API (LMStudio)
+
+Current model integration targets a local HTTP service at `http://10.0.0.37:1234`.
+
+- `GET /api/v1/models`: list available models
+- `POST /api/v1/chat`: send a screenshot description request using `input` items with `text` and `image`
+- `POST /api/v1/models/load`: load a model into memory
+- `POST /api/v1/models/download`: download a model
+- `GET /api/v1/models/download/status/:job_id`: check download status
+
+The current implementation selects a loaded vision-capable model when available, otherwise the first vision-capable model.
+
 ## Current Status
 
 Implemented now:
@@ -56,18 +69,6 @@ The README-level visual contract is:
 - Blue: responding or presenting an answer
 
 The current prototype supports the color/state contract and shape switching. In the responding state, the overlay becomes a larger blue text bubble, stops spinning, shows a truncated answer, and stays visible until the next capture.
-
-## Local Model API
-
-Current model integration targets a local HTTP service at `http://10.0.0.37:1234`.
-
-- `GET /api/v1/models`: list available models
-- `POST /api/v1/chat`: send a screenshot description request using `input` items with `text` and `image`
-- `POST /api/v1/models/load`: load a model into memory
-- `POST /api/v1/models/download`: download a model
-- `GET /api/v1/models/download/status/:job_id`: check download status
-
-The current implementation selects a loaded vision-capable model when available, otherwise the first vision-capable model.
 
 ## Tech Stack
 
