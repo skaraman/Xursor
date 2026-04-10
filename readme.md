@@ -1,7 +1,7 @@
 # Xursor -  inspired by Clicky https://github.com/farzaa/clicky
 
 Xursor is a Windows desktop prototype for a secondary on-screen assistant. The current codebase implements the overlay shell: a PyQt6 app that opens a transparent always-on-top overlay window, follows the cursor, and runs from the system tray. The intended next subsystem is a hover-driven UI explainer that captures the hovered region, sends it to a local model server, and reflects request state through the overlay.
-
+![Demo](./preview.gif)
 ## PREREQUIREMENTS
 Local Model API (LMStudio)
 
